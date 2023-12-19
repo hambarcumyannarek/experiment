@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 app.get('/', (req, res) => {
-    res.cookie('myCookiesss', 'hello world', {httpOnly: true, secure: true})
+    res.cookie('myCookiessss', 'cookieValue', { secure: true, httpOnly: true, sameSite: 'Strict'});
     res.send('hello world')
 })
 
